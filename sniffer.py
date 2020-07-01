@@ -2,16 +2,16 @@
 from struct import unpack
 from py9b.link.base import LinkOpenException, LinkTimeoutException
 #from py9b.link.tcp import TCPLink
-#from py9b.link.ble import BLELink
+from py9b.link.ble import BLELink
 from py9b.link.serial import SerialLink
 from py9b.transport.base import BaseTransport as BT
 from py9b.transport.packet import BasePacket as PKT
 from py9b.transport.xiaomi import XiaomiTransport
 from py9b.transport.ninebot import NinebotTransport
 
-link = SerialLink()
+#link = SerialLink()
 #link = TCPLink()
-#link = BLELink()
+link = BLELink()
 
 with link:
 	print "Scanning..."
